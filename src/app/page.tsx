@@ -1,7 +1,5 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div>zebi</div>
+    <div><h1 className="text-7xl">L'Élégance Gourmande</h1></div>
   );
 }
