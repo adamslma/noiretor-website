@@ -1,6 +1,6 @@
 export default function Confidentialite() {
     return (
-      <main className="bg-neutral-900 text-gray-50 px-8 py-28 md:px-48 w-full mx-auto space-y-14">
+      <main className="bg-neutral-900 text-gray-50 px-8 py-28 md:px-48 font-serif w-full mx-auto space-y-14">
         <h1 className="text-4xl font-serif text-amber-200">Politique de confidentialité</h1>
   
         <section className="space-y-4">

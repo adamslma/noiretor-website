@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Menu, X } from "lucide-react";
 import Link from "next/link";
 import TiktokIcon from "./icons/TiktokIcon";
 
@@ -12,11 +12,11 @@ export default function SiteSidebar() {
 
   return (
     <>
-      {/* TOPBAR sans titre */}
-      <header className="fixed top-0 left-0 w-full px-6 py-4 z-50 flex justify-end">
+      {/* TOPBAR */}
+      <header className="fixed top-0 left-0 w-full px-6 py-4 z-40 flex justify-end">
         <button
           onClick={toggleSidebar}
-          className="text-amber-200 hover:text-white transition p-2"
+          className="text-amber-200 hover:text-white transition p-2 z-50"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -25,14 +25,14 @@ export default function SiteSidebar() {
       {/* OVERLAY */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/50 z-40"
+          className="fixed inset-0 bg-black/50 z-30"
           onClick={() => setOpen(false)}
         />
       )}
 
       {/* SIDEBAR GAUCHE */}
       <div
-        className={`fixed top-0 left-0 h-full w-96 bg-neutral-900 text-amber-100 z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-full sm:w-96 bg-neutral-900 text-amber-100 z-40 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >

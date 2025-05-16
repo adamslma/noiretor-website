@@ -4,7 +4,7 @@ export default function MentionsLegales() {
       <h1 className="text-4xl font-serif text-amber-200">Mentions légales</h1>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">Éditeur du site</p>
+        <h2 className="text-2xl text-amber-300 font-medium">Éditeur du site</h2>
         <p>
           Le site <strong>noiretor.fr</strong> est édité par :
         </p>
@@ -22,7 +22,7 @@ export default function MentionsLegales() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">Hébergement</p>
+        <h2 className="text-2xl text-amber-300 font-medium">Hébergement</h2>
         <p>Le site est hébergé par :</p>
         <p>
           <strong>Vercel Inc.</strong>
@@ -45,9 +45,9 @@ export default function MentionsLegales() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           Propriété intellectuelle
-        </p>
+        </h2>
         <p>
           L’ensemble du contenu présent sur le site noiretor.fr (textes, images,
           graphismes, logo, vidéos) est la propriété exclusive de Noir & Or ou
@@ -58,7 +58,7 @@ export default function MentionsLegales() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">Responsabilité</p>
+        <h2 className="text-2xl text-amber-300 font-medium">Responsabilité</h2>
         <p>
           Noir & Or décline toute responsabilité en cas d’interruption du site,
           de bugs ou d’erreurs pouvant survenir, ou pour tout dommage résultant
@@ -67,9 +67,9 @@ export default function MentionsLegales() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           Données personnelles
-        </p>
+        </h2>
         <p>
           Pour plus d’informations sur le traitement des données personnelles,
           veuillez consulter notre&nbsp;

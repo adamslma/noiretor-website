@@ -2,126 +2,91 @@ export default function Menu() {
   return (
     <section
       id="carte"
-      className="bg-neutral-950 text-amber-100 py-48 px-6 md:px-24"
+      className="bg-neutral-950 text-amber-100 py-24 sm:py-32 px-4 sm:px-6 md:px-12 lg:px-24"
     >
       <div className="max-w-6xl mx-auto space-y-20">
         {/* Titre */}
-        <div
-          className="text-center space-y-8
-          "
-        >
-          <h2 className="text-5xl font-serif tracking-wide text-amber-200">
+        <div className="text-center space-y-6">
+          <h2 className="text-4xl sm:text-5xl font-serif tracking-wide text-amber-200">
             Notre Carte
           </h2>
-          <p className="text-lg text-gray-50 font-light">
+          <p className="text-base sm:text-lg text-gray-50 font-light max-w-2xl mx-auto">
             Une symphonie de saveurs, de textures et de couleurs. Chaque plat
             raconte une saison, un terroir, une émotion.
           </p>
         </div>
 
-        {/* Entrées */}
-        <div>
-          <h3 className="text-3xl font-serif text-amber-300 mb-6">Entrées</h3>
-          <ul className="space-y-6">
-            <MenuItem
-              name="Velouté de châtaignes & noisettes torréfiées"
-              price="14€"
-            />
-            <MenuItem
-              name="Œuf parfait, écume de parmesan & truffe"
-              price="16€"
-            />
-            <MenuItem name="Saumon gravelax, betterave & raifort" price="17€" />
-            <MenuItem name="Foie gras maison, chutney de figues" price="19€" />
-            <MenuItem
-              name="Carpaccio de betterave, chèvre frais & noix"
-              price="13€"
-            />
-          </ul>
-        </div>
+        {/* Sections : Entrées, Plats, Desserts, Boissons */}
+        {[
+          {
+            title: "Entrées",
+            items: [
+              ["Velouté de châtaignes & noisettes torréfiées", "14€"],
+              ["Œuf parfait, écume de parmesan & truffe", "16€"],
+              ["Saumon gravelax, betterave & raifort", "17€"],
+              ["Foie gras maison, chutney de figues", "19€"],
+              ["Carpaccio de betterave, chèvre frais & noix", "13€"],
+            ],
+          },
+          {
+            title: "Plats",
+            items: [
+              ["Filet de bar, purée de panais & jus au safran", "28€"],
+              [
+                "Suprême de volaille fermière aux morilles, écrasé de pommes de terre",
+                "26€",
+              ],
+              [
+                "Magret de canard, réduction balsamique & légumes racines",
+                "26€",
+              ],
+              ["Risotto au vieux comté & champignons des sous-bois", "23€"],
+            ],
+          },
+          {
+            title: "Desserts",
+            items: [
+              ["Sphère chocolatée, cœur praliné fondant", "12€"],
+              ["Tarte fine aux poires & caramel au beurre salé", "11€"],
+              ["Crème brûlée au thé noir fumé", "10€"],
+              ["Fromages affinés, pain aux noix & confiture artisanale", "13€"],
+            ],
+          },
+          {
+            title: "Cocktails & Boissons",
+            items: [
+              [
+                "Cocktail 'Noir & Or' – vodka, gingembre, agrumes & feuille d’or",
+                "14€",
+              ],
+              ["French Negroni – gin, vermouth, liqueur de cassis", "13€"],
+              ["Spritz de saison – infusion maison & prosecco", "12€"],
+              ["Éclat de Lavande – gin, lavande & blanc d’œuf", "13€"],
+              ["Noisette Noire – rhum, noisette & espresso", "14€"],
+              [
+                "Mocktail 'Verger' – pomme verte, concombre & menthe fraîche",
+                "8€",
+              ],
+              ["Citronnade maison au thym & miel", "6€"],
+              ["Eau minérale plate ou gazeuse – bouteille 75cl", "5€"],
+              ["Café bio ou thé infusé minute", "4€"],
+            ],
+          },
+        ].map((section) => (
+          <div key={section.title}>
+            <h3 className="text-2xl sm:text-3xl font-serif text-amber-300 mb-6">
+              {section.title}
+            </h3>
+            <ul className="space-y-4">
+              {section.items.map(([name, price]) => (
+                <MenuItem key={name} name={name} price={price} />
+              ))}
+            </ul>
+          </div>
+        ))}
 
-        {/* Plats */}
-        <div>
-          <h3 className="text-3xl font-serif text-amber-300 mb-6">Plats</h3>
-          <ul className="space-y-6">
-            <MenuItem
-              name="Filet de bar, purée de panais & jus au safran"
-              price="28€"
-            />
-            <MenuItem
-              name="Suprême de volaille fermière aux morilles, écrasé de pommes de terre"
-              price="26€"
-            />
-            <MenuItem
-              name="Magret de canard, réduction balsamique & légumes racines"
-              price="26€"
-            />
-            <MenuItem
-              name="Risotto au vieux comté & champignons des sous-bois"
-              price="23€"
-            />
-          </ul>
-        </div>
-
-        {/* Desserts */}
-        <div>
-          <h3 className="text-3xl font-serif text-amber-300 mb-6">Desserts</h3>
-          <ul className="space-y-6">
-            <MenuItem
-              name="Sphère chocolatée, cœur praliné fondant"
-              price="12€"
-            />
-            <MenuItem
-              name="Tarte fine aux poires & caramel au beurre salé"
-              price="11€"
-            />
-            <MenuItem name="Crème brûlée au thé noir fumé" price="10€" />
-            <MenuItem
-              name="Fromages affinés, pain aux noix & confiture artisanale"
-              price="13€"
-            />
-          </ul>
-        </div>
-
-        {/* Boissons */}
-        <div>
-          <h3 className="text-3xl font-serif text-amber-300 mb-6">
-            Cocktails & Boissons
-          </h3>
-          <ul className="space-y-6">
-            <MenuItem
-              name="Cocktail 'Noir & Or' – vodka, gingembre, agrumes & feuille d’or"
-              price="14€"
-            />
-            <MenuItem
-              name="French Negroni – gin, vermouth, liqueur de cassis"
-              price="13€"
-            />
-            <MenuItem
-              name="Spritz de saison – infusion maison & prosecco"
-              price="12€"
-            />
-            <MenuItem
-              name="Éclat de Lavande – gin, lavande & blanc d’œuf"
-              price="13€"
-            />
-            <MenuItem
-              name="Noisette Noire – rhum, noisette & espresso"
-              price="14€"
-            />
-            <MenuItem
-              name="Mocktail 'Verger' – pomme verte, concombre & menthe fraîche"
-              price="8€"
-            />
-            <MenuItem name="Citronnade maison au thym & miel" price="6€" />
-            <MenuItem
-              name="Eau minérale plate ou gazeuse – bouteille 75cl"
-              price="5€"
-            />
-            <MenuItem name="Café bio ou thé infusé minute" price="4€" />
-          </ul>
-        </div>
-        <div className=" flex justify-center mt-16">
+        {/* Bouton */}
+        <div className="flex justify-center mt-16">
           <a
             href="/reservation"
             className="inline-block bg-amber-300 text-neutral-900 px-8 py-3 rounded-full text-lg hover:bg-amber-400 transition"
@@ -134,12 +99,15 @@ export default function Menu() {
   );
 }
 
-// Sous-composant MenuItem
 function MenuItem({ name, price }: { name: string; price: string }) {
   return (
-    <li className="flex justify-between border-b border-amber-100/20 pb-2">
-      <span className="text-left text-gray-50">{name}</span>
-      <span className="text-right text-amber-300 font-light">{price}</span>
+    <li className="flex flex-wrap justify-between border-b border-amber-100/20 pb-2 gap-x-4">
+      <span className="text-gray-50 text-base sm:text-lg max-w-[75%]">
+        {name}
+      </span>
+      <span className="text-amber-300 font-light text-base sm:text-lg">
+        {price}
+      </span>
     </li>
   );
 }

@@ -6,17 +6,17 @@ import TiktokIcon from "./icons/TiktokIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-amber-100 py-24 px-6 md:px-24">
+    <footer className="bg-neutral-900 text-amber-100 py-16 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Infos pratiques */}
         <div className="text-center space-y-12">
-          <h2 className="text-4xl font-serif tracking-wide text-amber-200">
+          <h2 className="text-3xl sm:text-4xl font-serif tracking-wide text-amber-200">
             Informations pratiques
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10 text-lg font-light text-amber-100/90 text-left max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-base sm:text-lg font-light text-amber-100/90 text-left max-w-4xl mx-auto">
             <div>
-              <p className="text-amber-200 text-xl mb-2 font-medium">Adresse</p>
+              <p className="text-amber-200 text-lg mb-2 font-medium">Adresse</p>
               <p className="text-gray-50">
                 Noir & Or
                 <br />
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-amber-200 text-xl mb-2 font-medium">
+              <p className="text-amber-200 text-lg mb-2 font-medium">
                 Horaires
               </p>
               <p className="text-gray-50">
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="text-amber-200 text-xl mb-2 font-medium">Contact</p>
+              <p className="text-amber-200 text-lg mb-2 font-medium">Contact</p>
               <p className="text-gray-50">
                 Tél : 01 42 00 00 00
                 <br />
@@ -50,7 +50,7 @@ export default function Footer() {
           <div className="mt-8">
             <a
               href="/reservation"
-              className="inline-block bg-amber-300 text-neutral-900 px-8 py-3 rounded-full text-lg hover:bg-amber-400 transition"
+              className="inline-block bg-amber-300 text-neutral-900 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:bg-amber-400 transition"
             >
               Réserver une table
             </a>
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         {/* Liens légaux */}
-        <div className="border-t border-amber-100/20 pt-6 text-sm flex flex-col md:flex-row justify-between items-center gap-4 text-amber-100/60">
+        <div className="border-t border-amber-100/20 pt-6 text-sm flex flex-col md:flex-row justify-between items-center gap-4 text-amber-100/60 text-center">
           <div>
             <p className="mb-1">
               &copy; {new Date().getFullYear()} Noir & Or. Tous droits réservés.
@@ -101,7 +101,7 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link href="/cgu" className="hover:text-amber-200 transition">
               CGU
             </Link>

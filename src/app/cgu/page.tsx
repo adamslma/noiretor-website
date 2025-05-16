@@ -7,7 +7,7 @@ export default function CGU() {
       </h1>
 
       <section className="space-y-4 ">
-        <p className="text-2xl text-amber-300 font-medium">1. Présentation</p>
+        <h2 className="text-2xl text-amber-300 font-medium">1. Présentation</h2>
         <p>
           Le présent site web est édité par Noir & Or, restaurant gastronomique
           situé au 17 Rue du Palais-Royal, 75001 Paris.
@@ -20,7 +20,7 @@ export default function CGU() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">2. Réservations</p>
+        <h2 className="text-2xl text-amber-300 font-medium">2. Réservations</h2>
         <p>
           Le site permet aux utilisateurs de consulter la carte du restaurant,
           les horaires d’ouverture et d’effectuer des réservations. Toute
@@ -30,9 +30,9 @@ export default function CGU() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           3. Propriété intellectuelle
-        </p>
+        </h2>
         <p>
           Tous les éléments du site (textes, images, vidéos, graphismes, logo,
           nom commercial) sont la propriété exclusive de Noir & Or ou de ses
@@ -42,9 +42,9 @@ export default function CGU() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           4. Données personnelles
-        </p>
+        </h2>
         <p>
           Les données collectées via le formulaire de réservation ou de contact
           sont traitées conformément à notre
@@ -56,9 +56,9 @@ export default function CGU() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           5. Responsabilités
-        </p>
+        </h2>
         <p>
           Noir & Or s’efforce de fournir sur le site des informations aussi
           précises que possible. Toutefois, il ne pourra être tenu responsable
@@ -71,9 +71,9 @@ export default function CGU() {
       </section>
 
       <section className="space-y-4">
-        <p className="text-2xl text-amber-300 font-medium">
+        <h2 className="text-2xl text-amber-300 font-medium">
           6. Droit applicable
-        </p>
+        </h2>
         <p>
           Les présentes CGU sont régies par le droit français. Tout litige
           relatif à l’utilisation du site sera soumis à la compétence exclusive
