@@ -26,7 +26,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 // 2. Quelques dispos les 10 jours suivants (2 créneaux par jour)
-const slots = ['12:00', '13:00', '19:00', '20:00'];
+const slots = ['12:00', '12:30', '13:00', '13:30', '19:00', '19:30', '20:00', '20:30'];
 for (let i = 3; i < 13; i++) {
   const d = addDays(today, i);
   const key = formatDateFns(d, 'yyyy-MM-dd');
