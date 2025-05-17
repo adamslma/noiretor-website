@@ -64,6 +64,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
+            aria-label="Tiktok"
           >
             <TiktokIcon size={24} />
           </a>
@@ -72,6 +73,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
+            aria-label="Instagram"
           >
             <Instagram size={24} />
           </a>
@@ -80,6 +82,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
+            aria-label="Facebook"
           >
             <Facebook size={24} />
           </a>
@@ -96,6 +99,7 @@ export default function Footer() {
               <a
                 className="hover:text-amber-200 transition"
                 href="https://asdigitalagency.fr/"
+                aria-label="AS Digital Agency"
               >
                 AS Digital Agency
               </a>

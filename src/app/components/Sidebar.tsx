@@ -17,6 +17,7 @@ export default function SiteSidebar() {
         <button
           onClick={toggleSidebar}
           className="text-amber-200 hover:text-white transition p-2 z-50"
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -88,6 +89,7 @@ export default function SiteSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
+              aria-label="Tiktok"
             >
               <TiktokIcon size={28} />
             </a>
@@ -96,6 +98,7 @@ export default function SiteSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
+              aria-label="Instagram"
             >
               <Instagram size={28} />
             </a>
@@ -104,6 +107,7 @@ export default function SiteSidebar() {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
+              aria-label="Facebook"
             >
               <Facebook size={28} />
             </a>
