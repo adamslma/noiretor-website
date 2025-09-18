@@ -6,7 +6,7 @@ import TiktokIcon from "./icons/TiktokIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-amber-100 py-16 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-24">
+    <footer className="bg-neutral-900 text-amber-100 py-16 sm:py-20 px-6 sm:px-6 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Infos pratiques */}
         <div className="text-center space-y-12">
