@@ -30,9 +30,9 @@ export default function About() {
         </div>
 
         <blockquote className="italic text-base sm:text-lg md:text-xl text-amber-200 font-light border-l-4 border-amber-500 pl-4">
-          "Notre ambition n’est pas de surprendre, mais de toucher. Par la
+          &quot;Notre ambition n’est pas de surprendre, mais de toucher. Par la
           sincérité d’un plat, par la justesse d’un détail, par la mémoire d’un
-          goût oublié."
+          goût oublié.&quot;
         </blockquote>
 
         <p className="text-sm text-amber-100/60">— L’équipe Noir & Or</p>

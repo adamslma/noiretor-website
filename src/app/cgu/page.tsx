@@ -65,7 +65,7 @@ export default function CGU() {
           des omissions, inexactitudes ou carences dans la mise à jour.
         </p>
         <p>
-          L'utilisateur s'engage à accéder au site avec un matériel récent, ne
+          L’utilisateur s’engage à accéder au site avec un matériel récent, ne
           contenant pas de virus, et avec un navigateur mis à jour.
         </p>
       </section>

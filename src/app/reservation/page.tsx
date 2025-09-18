@@ -141,7 +141,7 @@ const ConfirmationMessage = ({
             impatience !
           </p>
           <p className="text-amber-200 text-sm">
-            Un email de confirmation vous a été envoyé à l'adresse {form.email}
+            Un email de confirmation vous a été envoyé à l&apos;adresse {form.email}
           </p>
         </div>
 
