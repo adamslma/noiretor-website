@@ -10,14 +10,11 @@ export default function Localisation() {
             Notre emplacement
           </h2>
           <p className="text-base sm:text-lg text-gray-50 leading-relaxed font-light">
-            Le restaurant Noir & Or est situé au cœur du 1er arrondissement de
-            Paris, à deux pas du Palais-Royal. Un cadre raffiné, calme et chargé
-            d’histoire, idéal pour savourer une cuisine française d’exception
-            dans une atmosphère élégante et intime.
+            Le restaurant Noir & Or est situé au cœur du 1er arrondissement de Paris, à deux pas du
+            Palais-Royal. Un cadre raffiné, calme et chargé d’histoire, idéal pour savourer une
+            cuisine française d’exception dans une atmosphère élégante et intime.
           </p>
-          <p className="text-sm text-amber-100/60">
-            17 Rue du Palais-Royal, 75001 Paris
-          </p>
+          <p className="text-sm text-amber-100/60">17 Rue du Palais-Royal, 75001 Paris</p>
         </div>
 
         {/* Carte Google Maps */}

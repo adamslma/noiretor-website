@@ -14,17 +14,14 @@ export default function Contact() {
   return (
     <div className="bg-neutral-900">
       <main className="text-gray-50 px-6 py-28 md:px-12 w-full mx-auto max-w-6xl space-y-16">
-        <h1 className="text-4xl font-serif text-amber-200 text-center">
-          Contactez-nous
-        </h1>
+        <h1 className="text-4xl font-serif text-amber-200 text-center">Contactez-nous</h1>
 
         <div className="grid md:grid-cols-2 gap-32">
           {/* Infos pratiques */}
           <div className="space-y-6">
             <p className="text-lg font-light text-gray-50 leading-relaxed">
-              Une question, une demande particulière ou envie de réserver pour
-              un évènement privé ? Laissez-nous un message, nous vous répondrons
-              dans les plus brefs délais.
+              Une question, une demande particulière ou envie de réserver pour un évènement privé ?
+              Laissez-nous un message, nous vous répondrons dans les plus brefs délais.
             </p>
 
             <div>
@@ -39,9 +36,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <p className="text-amber-200 text-lg font-medium mb-1">
-                Téléphone
-              </p>
+              <p className="text-amber-200 text-lg font-medium mb-1">Téléphone</p>
               <p>01 42 00 00 00</p>
             </div>
 
@@ -96,11 +91,7 @@ export default function Contact() {
               Envoyer
             </button>
 
-            {submitted && (
-              <p className="text-green-400 mt-4">
-                Votre message a bien été envoyé.
-              </p>
-            )}
+            {submitted && <p className="text-green-400 mt-4">Votre message a bien été envoyé.</p>}
           </form>
         </div>
       </main>

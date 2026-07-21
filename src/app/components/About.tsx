@@ -9,30 +9,27 @@ export default function About() {
 
           <p className="text-base sm:text-lg leading-relaxed text-gray-50 font-light">
             Fondé sur une vision claire et audacieuse,{" "}
-            <span className="text-amber-200 font-medium">Noir & Or</span> est né
-            du désir d’offrir une expérience gastronomique qui allie l’élégance
-            du cadre, l’authenticité du goût et la précision du geste.
+            <span className="text-amber-200 font-medium">Noir & Or</span> est né du désir d’offrir
+            une expérience gastronomique qui allie l’élégance du cadre, l’authenticité du goût et la
+            précision du geste.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed text-gray-50 font-light">
-            Chaque élément de notre maison a été pensé comme une lettre d’amour
-            à la cuisine française : un hommage aux produits du terroir, aux
-            saisons, et aux gestes des grands maîtres. Ici, les saveurs se
-            révèlent avec justesse, le service s’efface avec élégance, et le
-            temps semble suspendu.
+            Chaque élément de notre maison a été pensé comme une lettre d’amour à la cuisine
+            française : un hommage aux produits du terroir, aux saisons, et aux gestes des grands
+            maîtres. Ici, les saveurs se révèlent avec justesse, le service s’efface avec élégance,
+            et le temps semble suspendu.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed text-gray-50 font-light">
-            Dans l’intimité de notre salle feutrée, éclairée par des touches
-            d’or, nous vous invitons à vivre un moment rare, où l’émotion du
-            goût se mêle à la chaleur de l’accueil.
+            Dans l’intimité de notre salle feutrée, éclairée par des touches d’or, nous vous
+            invitons à vivre un moment rare, où l’émotion du goût se mêle à la chaleur de l’accueil.
           </p>
         </div>
 
         <blockquote className="italic text-base sm:text-lg md:text-xl text-amber-200 font-light border-l-4 border-amber-500 pl-4">
-          &quot;Notre ambition n’est pas de surprendre, mais de toucher. Par la
-          sincérité d’un plat, par la justesse d’un détail, par la mémoire d’un
-          goût oublié.&quot;
+          &quot;Notre ambition n’est pas de surprendre, mais de toucher. Par la sincérité d’un plat,
+          par la justesse d’un détail, par la mémoire d’un goût oublié.&quot;
         </blockquote>
 
         <p className="text-sm text-amber-100/60">— L’équipe Noir & Or</p>
