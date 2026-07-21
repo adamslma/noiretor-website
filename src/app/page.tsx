@@ -109,7 +109,7 @@ export default function Home() {
                 className={`py-9 md:min-h-80 md:px-8 md:py-10 ${index > 0 ? "border-t border-[#191815]/20 md:border-l md:border-t-0" : ""}`}
               >
                 <span className="font-mono text-xs tabular-nums text-[#a7793d]">{number}</span>
-                <h3 className="mt-20 text-3xl">{title}</h3>
+                <h3 className="mt-10 sm:mt-20 text-3xl">{title}</h3>
                 <p className="mt-5 max-w-sm text-sm leading-7 text-[#5e594f]">{copy}</p>
               </article>
             ))}
