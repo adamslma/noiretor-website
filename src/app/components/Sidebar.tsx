@@ -22,7 +22,7 @@ export default function SiteHeader() {
           className="font-serif text-xl tracking-[-0.04em]"
           aria-label="Noir et Or, accueil"
         >
-          Noir <span className="text-[#d0ad74]">&</span> Or
+          Noir <span className="text-[#d0ad74] italic">&</span> Or
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Navigation principale">
