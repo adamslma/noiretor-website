@@ -1,85 +1,77 @@
 export default function Confidentialite() {
-    return (
-      <main className="bg-neutral-900 text-gray-50 px-8 py-28 md:px-48 font-serif w-full mx-auto space-y-14">
-        <h1 className="text-4xl font-serif text-amber-200">Politique de confidentialité</h1>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">1. Données collectées</h2>
-          <p>
-            Lors de votre navigation sur le site <strong>noiretor.fr</strong>, nous pouvons être amenés à collecter des données personnelles
-            telles que votre nom, votre adresse e-mail, votre numéro de téléphone ou des informations liées à une réservation.
+  return (
+    <main id="contenu" className="min-h-screen bg-[#191815] px-6 pb-24 pt-32 text-[#eee9df] md:px-12 md:pt-40">
+      <div className="mx-auto max-w-4xl space-y-12">
+        <header>
+          <p className="eyebrow mb-5 text-[#d0ad74]">Données personnelles</p>
+          <h1 className="text-5xl leading-tight md:text-7xl">Politique de confidentialité</h1>
+        </header>
+
+        <section className="border-l-2 border-[#d0ad74] bg-white/[0.04] p-6 md:p-8">
+          <h2 className="text-2xl text-[#d0ad74]">Site de démonstration</h2>
+          <p className="mt-4 leading-7 text-[#eee9df]/75">
+            « Noir & Or » est un concept fictif créé par{" "}
+            <a href="https://asdigitalagency.fr/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-[#d0ad74]">AS Digital</a>,
+            sans lien avec un restaurant réel. Les formulaires simulent une prise
+            de contact ou une réservation et ne permettent pas de joindre un
+            établissement.
           </p>
         </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">2. Finalités du traitement</h2>
-          <p>
-            Ces données sont collectées dans le but de :
-          </p>
-          <ul className="list-disc list-inside text-gray-50">
-            <li>répondre à vos demandes via le formulaire de contact,</li>
-            <li>gérer vos réservations de table,</li>
-            <li>vous envoyer une confirmation ou un rappel de réservation,</li>
-            <li>améliorer notre service et votre expérience utilisateur.</li>
-          </ul>
-        </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">3. Conservation des données</h2>
-          <p>
-            Vos données sont conservées uniquement le temps nécessaire aux finalités pour lesquelles elles ont été collectées,
-            et ne sont en aucun cas revendues à des tiers.
+
+        <section className="space-y-4 border-t border-white/15 pt-8">
+          <h2 className="text-2xl text-[#d0ad74]">1. Informations saisies</h2>
+          <p className="leading-7 text-[#eee9df]/75">
+            Dans la version actuelle, les informations saisies dans les
+            formulaires ne sont envoyées à aucun restaurant et aucune réservation
+            réelle n’est enregistrée. Elles sont utilisées dans le navigateur
+            uniquement pour simuler le fonctionnement de l’interface pendant la
+            session.
           </p>
         </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">4. Partage des données</h2>
-          <p>
-            Vos données peuvent être partagées uniquement avec les prestataires techniques impliqués dans le fonctionnement
-            du site (hébergement, e-mails) et uniquement dans ce cadre. Ces prestataires sont soumis à des obligations de confidentialité strictes.
+
+        <section className="space-y-4 border-t border-white/15 pt-8">
+          <h2 className="text-2xl text-[#d0ad74]">2. Absence de réservation réelle</h2>
+          <p className="leading-7 text-[#eee9df]/75">
+            La saisie d’un nom, d’une adresse électronique ou d’un numéro de
+            téléphone n’entraîne ni envoi d’un message, ni confirmation par
+            courrier électronique, ni création d’un dossier client. Il est
+            déconseillé de saisir des informations sensibles dans ces champs de
+            démonstration.
           </p>
         </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">5. Vos droits</h2>
-          <p>
-            Conformément à la législation en vigueur, vous disposez d’un droit d’accès, de rectification, de suppression,
-            de limitation ou d’opposition au traitement de vos données personnelles. Pour exercer ces droits, contactez-nous à :
-          </p>
-          <p className="text-amber-200">
-            contact@noiretor.fr
-          </p>
-        </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">6. Cookies</h2>
-          <p>
-            Le site peut utiliser des cookies à des fins de statistiques ou d’amélioration de l’expérience utilisateur.
-            Vous pouvez configurer votre navigateur pour bloquer ces cookies ou être averti de leur utilisation.
+
+        <section className="space-y-4 border-t border-white/15 pt-8">
+          <h2 className="text-2xl text-[#d0ad74]">3. Données techniques</h2>
+          <p className="leading-7 text-[#eee9df]/75">
+            L’hébergeur peut traiter des données techniques strictement
+            nécessaires à la fourniture et à la sécurité du site, telles que
+            l’adresse IP, la date de connexion et les journaux techniques,
+            conformément à ses propres conditions et obligations légales.
           </p>
         </section>
-  
-        <section className="space-y-4">
-          <h2 className="text-2xl text-amber-300 font-medium">7. Hébergement</h2>
-          <p>
-            Le site est hébergé par&nbsp;
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-200 underline"
-            >
-              Vercel Inc.
-            </a>
-            , aux États-Unis. Les données peuvent donc être amenées à transiter hors de l’Union européenne,
-            mais sont encadrées contractuellement pour garantir leur protection conformément au RGPD.
+
+        <section className="space-y-4 border-t border-white/15 pt-8">
+          <h2 className="text-2xl text-[#d0ad74]">4. Évolution du site</h2>
+          <p className="leading-7 text-[#eee9df]/75">
+            Si une fonctionnalité réelle de collecte, d’envoi ou de conservation
+            était activée ultérieurement, cette politique devrait être mise à
+            jour avant sa mise en service afin de préciser le responsable du
+            traitement, les finalités, la base légale, les destinataires, la
+            durée de conservation et les droits des personnes.
           </p>
         </section>
-  
-        <p className="text-sm text-amber-100/60 pt-12">
-          Dernière mise à jour : {new Date().toLocaleDateString("fr-FR")}
-        </p>
-      </main>
-    );
-  }
-  
+
+        <section className="space-y-4 border-t border-white/15 pt-8">
+          <h2 className="text-2xl text-[#d0ad74]">5. Contact</h2>
+          <p className="leading-7 text-[#eee9df]/75">
+            Pour toute question concernant cette démonstration, utilisez les
+            coordonnées professionnelles publiées sur{" "}
+            <a href="https://asdigitalagency.fr/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-[#d0ad74]">asdigitalagency.fr</a>.
+          </p>
+        </section>
+
+        <p className="pt-8 text-xs text-[#eee9df]/40">Dernière mise à jour : 22 juillet 2026</p>
+      </div>
+    </main>
+  );
+}

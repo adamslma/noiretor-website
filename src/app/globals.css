@@ -1,13 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&display=swap');
+@import "@fontsource/lora/400.css";
+@import "@fontsource/lora/500.css";
+@import "@fontsource/lora/600.css";
+@import "@fontsource/quicksand/400.css";
+@import "@fontsource/quicksand/500.css";
+@import "@fontsource/quicksand/600.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-html {
-  font-family: 'Quicksand', serif;
+:root {
+  --ink: #191815;
+  --ink-soft: #26231e;
+  --paper: #eee9df;
+  --paper-deep: #e1dacd;
+  --cream: #f7f3ea;
+  --brass: #a7793d;
+  --brass-light: #d0ad74;
+  --muted: #736d63;
+  --line: rgba(25, 24, 21, 0.16);
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+
+a, button {
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+button:active, a:active { transform: translateY(1px) scale(0.99); }
+
+:focus-visible {
+  outline: 2px solid var(--brass-light);
+  outline-offset: 4px;
+}
+
+::selection { background: var(--brass); color: var(--cream); }
+
+.site-container {
+  width: min(100% - 2rem, 86rem);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.button-primary,
+.button-light,
+.button-line {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.button-primary { background: var(--ink); color: var(--cream); }
+.button-primary:hover { background: var(--brass); }
+.button-light { background: var(--cream); color: var(--ink); }
+.button-light:hover { background: var(--brass-light); }
+.button-line { border: 1px solid currentColor; }
+.button-line:hover { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+
+.rule { border-top: 1px solid var(--line); }
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -5rem;
+  z-index: 100;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 0.75rem 1rem;
+}
+.skip-link:focus { top: 1rem; }
+
+input, select, textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(238, 233, 223, 0.35);
+  border-radius: 0;
+  background: transparent;
+  color: var(--cream);
+  padding: 0.85rem 0;
+  font: inherit;
+}
+
+input::placeholder, textarea::placeholder { color: rgba(238, 233, 223, 0.45); }
+input:focus, select:focus, textarea:focus { border-bottom-color: var(--brass-light); outline: none; }
+option { background: var(--ink-soft); color: var(--cream); }
+
+@media (min-width: 768px) {
+  .site-container { width: min(100% - 5rem, 86rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

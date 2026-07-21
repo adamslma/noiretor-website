@@ -1,127 +1,48 @@
-"use client";
-
 import Link from "next/link";
-import { Facebook, Instagram } from "lucide-react";
-import TiktokIcon from "./icons/TiktokIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-amber-100 py-16 sm:py-20 px-6 sm:px-6 md:px-12 lg:px-24">
-      <div className="max-w-5xl mx-auto space-y-16">
-        {/* Infos pratiques */}
-        <div className="text-center space-y-12">
-          <h2 className="text-3xl sm:text-4xl font-serif tracking-wide text-amber-200">
-            Informations pratiques
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-base sm:text-lg font-light text-amber-100/90 text-left max-w-4xl mx-auto">
-            <div>
-              <p className="text-amber-200 text-lg mb-2 font-medium">Adresse</p>
-              <p className="text-gray-50">
-                Noir & Or
-                <br />
-                17 Rue du Palais-Royal
-                <br />
-                75001 Paris, France
-              </p>
-            </div>
-
-            <div>
-              <p className="text-amber-200 text-lg mb-2 font-medium">
-                Horaires
-              </p>
-              <p className="text-gray-50">
-                Mardi – Samedi : 12h – 14h30 / 19h – 23h
-                <br />
-                Dimanche – Lundi : fermé
-              </p>
-            </div>
-
-            <div>
-              <p className="text-amber-200 text-lg mb-2 font-medium">Contact</p>
-              <p className="text-gray-50">
-                Tél : 01 42 00 00 00
-                <br />
-                Email : contact@noiretor.fr
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <a
-              href="/reservation"
-              className="inline-block bg-amber-300 text-neutral-900 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg hover:bg-amber-400 transition"
-            >
-              Réserver une table
-            </a>
-          </div>
-        </div>
-
-        {/* Réseaux sociaux */}
-        <div className="flex justify-center gap-6 text-amber-300 text-xl">
-          <a
-            href="https://asdigitalagency.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition"
-            aria-label="Tiktok"
-          >
-            <TiktokIcon size={24} />
-          </a>
-          <a
-            href="https://asdigitalagency.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition"
-            aria-label="Instagram"
-          >
-            <Instagram size={24} />
-          </a>
-          <a
-            href="https://asdigitalagency.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition"
-            aria-label="Facebook"
-          >
-            <Facebook size={24} />
-          </a>
-        </div>
-
-        {/* Liens légaux */}
-        <div className="border-t border-amber-100/20 pt-6 text-sm flex flex-col md:flex-row justify-between items-center gap-4 text-amber-100/60 text-center">
+    <footer className="bg-[#191815] px-4 pb-8 pt-20 text-[#eee9df] md:px-10 md:pt-28">
+      <div className="mx-auto max-w-[86rem]">
+        <div className="grid gap-14 border-b border-white/15 pb-16 md:grid-cols-[1.3fr_.7fr_.7fr] md:pb-20">
           <div>
-            <p className="mb-1">
-              &copy; {new Date().getFullYear()} Noir & Or. Tous droits réservés.
-            </p>
+            <p className="eyebrow mb-5 text-[#d0ad74]">Noir & Or · Paris Iᵉʳ</p>
+            <h2 className="max-w-xl text-4xl leading-[1.08] md:text-6xl">Le goût du moment, servi avec mesure.</h2>
+          </div>
+          <div className="text-sm leading-7 text-[#eee9df]/70">
+            <p className="mb-3 font-semibold text-[#eee9df]">Nous trouver</p>
+            <p>17 rue du Palais-Royal<br />75001 Paris</p>
+            <a href="tel:+33142000000" className="mt-4 inline-block hover:text-[#d0ad74]">01 42 00 00 00</a>
+          </div>
+          <div className="text-sm leading-7 text-[#eee9df]/70">
+            <p className="mb-3 font-semibold text-[#eee9df]">Service</p>
+            <p>Du mardi au samedi<br />12h—14h30 · 19h—23h</p>
+            <Link href="/reservation" className="mt-4 inline-block text-[#d0ad74] underline decoration-[#d0ad74]/40 underline-offset-4 hover:text-[#eee9df]">Réserver une table</Link>
+          </div>
+        </div>
+        <div className="flex flex-col gap-5 pt-7 text-[0.68rem] uppercase tracking-[0.12em] text-[#eee9df]/45 md:flex-row md:items-center md:justify-between">
+          <div>
             <p>
-              Propulsé par{" "}
+              © {new Date().getFullYear()} Noir & Or · Site web créé par{" "}
               <a
-                className="hover:text-amber-200 transition"
                 href="https://asdigitalagency.fr/"
-                aria-label="AS Digital Agency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#eee9df]/70 hover:text-[#d0ad74]"
               >
-                AS Digital Agency
+                AS Digital
               </a>
             </p>
+            <p className="mt-2 normal-case tracking-normal text-[#eee9df]/35">
+              Concept fictif — ce site n’est associé à aucun restaurant réel.
+            </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/cgu" className="hover:text-amber-200 transition">
-              CGU
-            </Link>
-            <Link
-              href="/mentions-legales"
-              className="hover:text-amber-200 transition"
-            >
-              Mentions légales
-            </Link>
-            <Link
-              href="/confidentialite"
-              className="hover:text-amber-200 transition"
-            >
-              Politique de confidentialité
-            </Link>
-          </div>
+          <nav className="flex flex-wrap gap-x-6 gap-y-3" aria-label="Liens légaux">
+            <Link href="/mentions-legales" className="hover:text-[#eee9df]">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-[#eee9df]">Confidentialité</Link>
+            <Link href="/cgu" className="hover:text-[#eee9df]">Conditions</Link>
+            <Link href="/contact" className="hover:text-[#eee9df]">Contact</Link>
+          </nav>
         </div>
       </div>
     </footer>
