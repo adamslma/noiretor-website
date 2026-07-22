@@ -1,16 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/seo/JsonLd";
+import { createPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { MENU_SECTIONS, WINES } from "./menuData";
 
-export const metadata: Metadata = {
-  title: "La carte",
-  description:
-    "Découvrez la carte de saison, le menu dégustation et une sélection de la cave de Noir & Or.",
-};
+const PAGE_TITLE = "La carte";
+const PAGE_DESCRIPTION =
+  "Découvrez la carte de saison, le menu dégustation et une sélection de la cave de Noir & Or.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  path: "/menu",
+});
 
 export default function MenuPage() {
   return (
     <main id="contenu" className="bg-[#eee9df] pt-[4.75rem]">
+      <JsonLd
+        id="menu-page-structured-data"
+        data={createWebPageJsonLd({
+          title: PAGE_TITLE,
+          description: PAGE_DESCRIPTION,
+          path: "/menu",
+        })}
+      />
       <header className="site-container pb-20 pt-20 md:pb-28 md:pt-28">
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">

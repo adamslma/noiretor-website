@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Conditions générales d’utilisation",
   description: "Conditions d’utilisation du site de démonstration Noir & Or.",
-};
+  path: "/cgu",
+  index: false,
+});
 
 export default function TermsOfUsePage() {
   return (

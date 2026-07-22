@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Mentions légales",
   description: "Mentions légales du site de démonstration Noir & Or.",
-};
+  path: "/mentions-legales",
+  index: false,
+});
 
 export default function LegalNoticePage() {
   return (

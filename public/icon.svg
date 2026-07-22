@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Noir &amp; Or</title>
+  <rect width="512" height="512" rx="72" fill="#191815"/>
+  <circle cx="414" cy="92" r="190" fill="#a7793d" opacity=".22"/>
+  <path d="M64 92h384M64 420h384" stroke="#d0ad74" opacity=".55"/>
+  <text x="256" y="302" fill="#f7f3ea" font-family="Georgia,serif" font-size="148" text-anchor="middle" letter-spacing="-8">N&amp;O</text>
+</svg>
