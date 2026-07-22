@@ -10,12 +10,9 @@
   --ink: #191815;
   --ink-soft: #26231e;
   --paper: #eee9df;
-  --paper-deep: #e1dacd;
   --cream: #f7f3ea;
   --brass: #a7793d;
   --brass-light: #d0ad74;
-  --muted: #736d63;
-  --line: rgba(25, 24, 21, 0.16);
 }
 
 * {
@@ -42,7 +39,7 @@ body::before {
   z-index: 50;
   pointer-events: none;
   opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
 }
 
 h1,
@@ -141,10 +138,6 @@ a:active {
   color: var(--cream);
 }
 
-.rule {
-  border-top: 1px solid var(--line);
-}
-
 .skip-link {
   position: fixed;
   left: 1rem;
@@ -158,7 +151,7 @@ a:active {
   top: 1rem;
 }
 
-input,
+input:not([type="checkbox"], [type="radio"]),
 select,
 textarea {
   width: 100%;
@@ -175,7 +168,7 @@ input::placeholder,
 textarea::placeholder {
   color: rgba(238, 233, 223, 0.45);
 }
-input:focus,
+input:not([type="checkbox"], [type="radio"]):focus,
 select:focus,
 textarea:focus {
   border-bottom-color: var(--brass-light);

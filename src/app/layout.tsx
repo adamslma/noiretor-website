@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import "./globals.css";
-import SiteHeader from "./components/Sidebar";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://noiretor.fr"),
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  icons: { icon: "/icon.ico", shortcut: "/icon.ico", apple: "/icon.ico" },
+  icons: { icon: "/favicon.ico", shortcut: "/favicon.ico", apple: "/favicon.ico" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </a>
         <SiteHeader />
         {children}
-        <Footer />
+        <SiteFooter />
       </body>
     </html>
   );

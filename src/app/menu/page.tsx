@@ -1,55 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MENU_SECTIONS, WINES } from "./menuData";
 
 export const metadata: Metadata = {
   title: "La carte",
   description:
     "Découvrez la carte de saison, le menu dégustation et une sélection de la cave de Noir & Or.",
 };
-
-const sections = [
-  {
-    number: "01",
-    title: "Pour commencer",
-    note: "Quelques assiettes qui ouvrent l’appétit.",
-    items: [
-      ["Poireau grillé, vinaigrette de coquillages, livèche", "16"],
-      ["Œuf de plein air, morilles, pain fumé", "19"],
-      ["Truite des Pyrénées, betterave, raifort frais", "21"],
-      ["Foie gras de canard, rhubarbe, brioche au levain", "24"],
-    ],
-  },
-  {
-    number: "02",
-    title: "La suite",
-    note: "Pêche du jour, viandes françaises et légumes de saison.",
-    items: [
-      ["Lieu jaune, petits pois, laitue braisée, sauce vin jaune", "34"],
-      ["Volaille jaune, asperge blanche, ail des ours", "36"],
-      ["Canard de Challans, navet nouveau, jus au poivre", "39"],
-      ["Artichaut poivrade, épeautre, vieux comté", "29"],
-    ],
-  },
-  {
-    number: "03",
-    title: "Pour finir",
-    note: "Desserts peu sucrés, fromages bien affinés.",
-    items: [
-      ["Fraise, oseille, crème crue", "14"],
-      ["Chocolat noir, sarrasin, glace au foin", "15"],
-      ["Soufflé au citron, praliné amande", "16"],
-      ["Fromages de la maison Quatrehomme", "17"],
-    ],
-  },
-];
-
-const wines = [
-  ["Champagne · A. Bergère, Origine", "17 / 92"],
-  ["Loire · Vacheron, Sancerre 2023", "14 / 68"],
-  ["Bourgogne · P. Pillot, Bourgogne blanc 2022", "16 / 79"],
-  ["Rhône · Gramenon, Sierra du Sud 2022", "13 / 64"],
-  ["Bordeaux · Château Marsau 2019", "15 / 74"],
-];
 
 export default function MenuPage() {
   return (
@@ -72,12 +29,12 @@ export default function MenuPage() {
       </header>
 
       <div className="site-container">
-        <div className="rule" />
+        <hr className="border-0 border-t border-[#191815]/16" />
       </div>
 
       <section className="site-container py-20 md:py-28">
         <div className="space-y-24 md:space-y-32">
-          {sections.map((section, sectionIndex) => (
+          {MENU_SECTIONS.map((section, sectionIndex) => (
             <article key={section.title} className="grid gap-10 md:grid-cols-12">
               <div className={`md:col-span-4 ${sectionIndex % 2 ? "md:col-start-2" : ""}`}>
                 <span className="font-mono text-xs tabular-nums text-[#a7793d]">
@@ -86,18 +43,16 @@ export default function MenuPage() {
                 <h2 className="mt-4 text-4xl md:text-5xl">{section.title}</h2>
                 <p className="mt-4 max-w-xs text-sm leading-6 text-[#736d63]">{section.note}</p>
               </div>
-              <div
-                className={`md:col-span-7 ${sectionIndex % 2 ? "md:col-start-6" : "md:col-start-6"}`}
-              >
+              <div className="md:col-span-7 md:col-start-6">
                 <ul className="border-t border-[#191815]/25">
-                  {section.items.map(([name, price]) => (
+                  {section.items.map((item) => (
                     <li
-                      key={name}
+                      key={item.name}
                       className="grid grid-cols-[1fr_auto] gap-6 border-b border-[#191815]/16 py-5"
                     >
-                      <span className="font-serif text-lg leading-6 md:text-xl">{name}</span>
+                      <span className="font-serif text-lg leading-6 md:text-xl">{item.name}</span>
                       <span className="font-mono text-sm tabular-nums text-[#a7793d]">
-                        {price} €
+                        {item.price} €
                       </span>
                     </li>
                   ))}
@@ -134,13 +89,13 @@ export default function MenuPage() {
               quelques verres du moment — demandez-nous le livre de cave pour la sélection complète.
             </p>
             <ul className="mt-10 border-t border-white/20">
-              {wines.map(([name, price]) => (
+              {WINES.map((wine) => (
                 <li
-                  key={name}
+                  key={wine.name}
                   className="grid grid-cols-[1fr_auto] gap-5 border-b border-white/15 py-4 text-sm"
                 >
-                  <span>{name}</span>
-                  <span className="font-mono tabular-nums text-[#d0ad74]">{price} €</span>
+                  <span>{wine.name}</span>
+                  <span className="font-mono tabular-nums text-[#d0ad74]">{wine.price} €</span>
                 </li>
               ))}
             </ul>

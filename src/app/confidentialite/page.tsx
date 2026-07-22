@@ -1,4 +1,11 @@
-export default function Confidentialite() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Politique de confidentialité",
+  description: "Politique de confidentialité du site de démonstration Noir & Or.",
+};
+
+export default function PrivacyPolicyPage() {
   return (
     <main
       id="contenu"

@@ -1,4 +1,11 @@
-export default function CGU() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Conditions générales d’utilisation",
+  description: "Conditions d’utilisation du site de démonstration Noir & Or.",
+};
+
+export default function TermsOfUsePage() {
   return (
     <main
       id="contenu"

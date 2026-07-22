@@ -1,24 +1,33 @@
 import Link from "next/link";
 
-const principles = [
-  [
-    "01",
-    "Le produit d’abord",
-    "Nous suivons les arrivages et la saison, avec des assiettes lisibles où chaque ingrédient garde sa voix.",
-  ],
-  [
-    "02",
-    "Le geste précis",
-    "Sauces courtes, cuissons franches, assaisonnements justes : la technique soutient le goût sans se montrer.",
-  ],
-  [
-    "03",
-    "Une salle vivante",
-    "Un service attentif mais naturel, une lumière douce et le temps nécessaire pour profiter du repas.",
-  ],
-];
+type Principle = {
+  number: string;
+  title: string;
+  description: string;
+};
 
-export default function Home() {
+const PRINCIPLES = [
+  {
+    number: "01",
+    title: "Le produit d’abord",
+    description:
+      "Nous suivons les arrivages et la saison, avec des assiettes lisibles où chaque ingrédient garde sa voix.",
+  },
+  {
+    number: "02",
+    title: "Le geste précis",
+    description:
+      "Sauces courtes, cuissons franches, assaisonnements justes : la technique soutient le goût sans se montrer.",
+  },
+  {
+    number: "03",
+    title: "Une salle vivante",
+    description:
+      "Un service attentif mais naturel, une lumière douce et le temps nécessaire pour profiter du repas.",
+  },
+] as const satisfies readonly Principle[];
+
+export default function HomePage() {
   return (
     <main id="contenu" className="overflow-hidden bg-[#eee9df]">
       <section className="relative min-h-[100dvh] bg-[#191815] text-[#f7f3ea]">
@@ -103,14 +112,18 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid border-t border-[#191815]/20 md:grid-cols-3">
-            {principles.map(([number, title, copy], index) => (
+            {PRINCIPLES.map((principle, index) => (
               <article
-                key={title}
+                key={principle.number}
                 className={`py-9 md:min-h-80 md:px-8 md:py-10 ${index > 0 ? "border-t border-[#191815]/20 md:border-l md:border-t-0" : ""}`}
               >
-                <span className="font-mono text-xs tabular-nums text-[#a7793d]">{number}</span>
-                <h3 className="mt-10 sm:mt-20 text-3xl">{title}</h3>
-                <p className="mt-5 max-w-sm text-sm leading-7 text-[#5e594f]">{copy}</p>
+                <span className="font-mono text-xs tabular-nums text-[#a7793d]">
+                  {principle.number}
+                </span>
+                <h3 className="mt-10 text-3xl sm:mt-20">{principle.title}</h3>
+                <p className="mt-5 max-w-sm text-sm leading-7 text-[#5e594f]">
+                  {principle.description}
+                </p>
               </article>
             ))}
           </div>

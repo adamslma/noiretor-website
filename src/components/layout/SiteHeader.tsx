@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const links = [
+const NAVIGATION_LINKS = [
   { href: "/", label: "La maison" },
   { href: "/menu", label: "La carte" },
   { href: "/reservation", label: "Réserver" },
@@ -26,7 +26,7 @@ export default function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex" aria-label="Navigation principale">
-          {links.map((link) => {
+          {NAVIGATION_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
@@ -53,7 +53,7 @@ export default function SiteHeader() {
 
         <button
           type="button"
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen((isOpen) => !isOpen)}
           className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -70,17 +70,19 @@ export default function SiteHeader() {
 
       <div
         id="mobile-menu"
+        aria-hidden={!open}
         className={`overflow-hidden bg-[#191815] transition-[max-height] duration-300 md:hidden ${open ? "max-h-96" : "max-h-0"}`}
       >
         <nav
           className="site-container flex flex-col border-t border-white/10 py-5"
           aria-label="Navigation mobile"
         >
-          {links.map((link, index) => (
+          {NAVIGATION_LINKS.map((link, index) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
+              tabIndex={open ? undefined : -1}
               aria-current={pathname === link.href ? "page" : undefined}
               className={`flex items-baseline justify-between border-b border-white/10 py-4 font-serif text-2xl ${pathname === link.href ? "text-[#d0ad74]" : ""}`}
             >

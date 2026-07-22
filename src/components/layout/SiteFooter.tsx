@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function SiteFooter() {
   return (
     <footer className="bg-[#191815] px-4 pb-8 pt-20 text-[#eee9df] md:px-10 md:pt-28">
       <div className="mx-auto max-w-[86rem]">

@@ -1,4 +1,11 @@
-export default function MentionsLegales() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  description: "Mentions légales du site de démonstration Noir & Or.",
+};
+
+export default function LegalNoticePage() {
   return (
     <main
       id="contenu"
